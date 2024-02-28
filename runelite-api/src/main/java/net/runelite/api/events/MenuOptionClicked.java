@@ -72,6 +72,17 @@ public class MenuOptionClicked
 	}
 
 	/**
+	 * Sets the value of the additional parameter (param0) for the action in the menu entry.
+	 *
+	 * @param param0 the value of the additional parameter
+	 * @see MenuEntry#setParam0(int)
+	 */
+	public void setParam0(int param0)
+	{
+		menuEntry.setParam0(param0);
+	}
+
+	/**
 	 * Action parameter 1. Its value depends on the menuAction.
 	 */
 	@EqualsAndHashCode.Include
@@ -79,6 +90,17 @@ public class MenuOptionClicked
 	public int getParam1()
 	{
 		return menuEntry.getParam1();
+	}
+
+	/**
+	 * Sets the value of the second additional parameter (param1) for the action in the menu entry.
+	 *
+	 * @param param1 the value of the second additional parameter
+	 * @see MenuEntry#setParam1(int)
+	 */
+	public void setParam1(int param1)
+	{
+		menuEntry.setParam1(param1);
 	}
 
 	/**
@@ -112,6 +134,15 @@ public class MenuOptionClicked
 	}
 
 	/**
+	 * Sets the menu action for the menu entry.
+	 *
+	 * @param menuAction the menu action to set
+	 */
+	public void setMenuAction(MenuAction menuAction) {
+		menuEntry.setType(menuAction);
+	}
+
+	/**
 	 * The ID of the object, actor, or item that the interaction targets.
 	 */
 	@EqualsAndHashCode.Include
@@ -119,6 +150,17 @@ public class MenuOptionClicked
 	public int getId()
 	{
 		return menuEntry.getIdentifier();
+	}
+
+	/**
+	 * Sets the identifier for the menu entry.
+	 *
+	 * @param id the identifier to set
+	 * @see MenuEntry#setIdentifier(int)
+	 */
+	public void setId(int id)
+	{
+		menuEntry.setIdentifier(id);
 	}
 
 	/**
