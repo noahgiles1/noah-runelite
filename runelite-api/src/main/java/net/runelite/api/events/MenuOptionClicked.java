@@ -138,7 +138,8 @@ public class MenuOptionClicked
 	 *
 	 * @param menuAction the menu action to set
 	 */
-	public void setMenuAction(MenuAction menuAction) {
+	public void setMenuAction(MenuAction menuAction)
+	{
 		menuEntry.setType(menuAction);
 	}
 
