@@ -28,6 +28,7 @@ import javax.annotation.Nullable;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import lombok.ToString;
 import net.runelite.api.MenuAction;
 import net.runelite.api.MenuEntry;
@@ -59,6 +60,7 @@ public class MenuOptionClicked
 	 * Whether or not the event has been consumed by a subscriber.
 	 */
 	@Getter
+	@Setter
 	private boolean consumed;
 
 	/**
