@@ -8,33 +8,37 @@ import java.util.function.Predicate;
  * @param <EntityType> the returned object type
  * @param <QueryType>  the query type
  */
-public abstract class Query<EntityType, QueryType, QR extends QueryResults> {
+public abstract class Query<EntityType, QueryType, QR extends QueryResults>
+{
 
-    protected Predicate<EntityType> predicate = x -> true;
+	protected Predicate<EntityType> predicate = x -> true;
 
-    protected Query() {
-    }
+	protected Query()
+	{
+	}
 
-    /**
-     * Executes the query and filters through possible objects, returning only
-     * those who evaluate true using {@link #predicate}.
-     *
-     * @param client the game client
-     * @return the matching objects
-     */
-    public abstract QR result(Client client);
+	/**
+	 * Executes the query and filters through possible objects, returning only
+	 * those who evaluate true using {@link #predicate}.
+	 *
+	 * @param client the game client
+	 * @return the matching objects
+	 */
+	public abstract QR result(Client client);
 
-    /**
-     * Constructs and returns a predicate that will evaluate {@link #predicate}
-     * and the passed value.
-     *
-     * @param other the passed predicate
-     * @return the combined predicate
-     */
-    protected Predicate<EntityType> and(Predicate<EntityType> other) {
-        if (predicate == null) {
-            return other;
-        }
-        return predicate.and(other);
-    }
+	/**
+	 * Constructs and returns a predicate that will evaluate {@link #predicate}
+	 * and the passed value.
+	 *
+	 * @param other the passed predicate
+	 * @return the combined predicate
+	 */
+	protected Predicate<EntityType> and(Predicate<EntityType> other)
+	{
+		if (predicate == null)
+		{
+			return other;
+		}
+		return predicate.and(other);
+	}
 }

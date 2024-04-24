@@ -138,7 +138,7 @@ class InventoryGridOverlay extends Overlay
 	{
 		assert parentWidget.isIf3();
 		Widget wi = parentWidget.getChild(idx);
-		return new WidgetItem(wi.getItemId(), wi.getItemQuantity(), -1,wi.getBounds(), parentWidget, wi.getBounds());
+		return new WidgetItem(wi.getItemId(), wi.getItemQuantity(), -1, wi.getBounds(), parentWidget, wi.getBounds());
 	}
 
 	private void drawItem(Graphics2D graphics, Rectangle bounds, WidgetItem item)
