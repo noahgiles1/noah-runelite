@@ -50,6 +50,13 @@ public class WidgetItem
 	 */
 	private final int quantity;
 	/**
+	 * The index position of this WidgetItem inside its parents
+	 * WidgetItem array.
+	 * <p>
+	 //* @see Widget#getWidgetItems() //TODO
+	 */
+	private final int index;
+	/**
 	 * The area where the widget is drawn on the canvas.
 	 */
 	private final Rectangle canvasBounds;
